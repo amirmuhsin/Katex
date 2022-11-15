@@ -31,7 +31,7 @@ or
 
     Dependencies
     {
-      implementation 'in.hourglass.mathrender:katexmathview:1.0.3'
+      implementation 'io.github.iffanmajid:katexmathview:1.0.3'
     }
     
 ### Attributes supported
