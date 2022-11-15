@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-
 /*Bintray release config
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'   //Apply maven plugin
@@ -67,6 +66,28 @@ publishing {
 }
  */
 
+ext {
+    // Provide your own coordinates here
+    PUBLISH_GROUP_ID = 'io.github.iffanmajid'
+    PUBLISH_VERSION = '1.0.3'
+    PUBLISH_ARTIFACT_ID = 'katexmathview'
+    PUBLISH_DESCRIPTION = 'A KhanAcademy Katex based Library for Rendering math'
+    PUBLISH_URL = 'https://github.com/iffanmajid/Katex'
+    PUBLISH_LICENSE_NAME = 'Apache License'
+    PUBLISH_LICENSE_URL =
+            'https://github.com/iffanmajid/Katex#license'
+    PUBLISH_DEVELOPER_ID = 'iffanmajid'
+    PUBLISH_DEVELOPER_NAME = 'Iffan'
+    PUBLISH_DEVELOPER_EMAIL = 'ilutfimajid@gmail.com'
+    PUBLISH_SCM_CONNECTION =
+            'scm:git:github.com/iffanmajid/Katex.git'
+    PUBLISH_SCM_DEVELOPER_CONNECTION =
+            'scm:git:ssh://github.com/iffanmajid/Katex.git'
+    PUBLISH_SCM_URL =
+            'https://github.com/iffanmajid/Katex/tree/master'
+}
+
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
 
 android {
     compileSdkVersion project.ext.compileSdkVersion
